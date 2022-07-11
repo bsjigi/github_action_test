@@ -5,11 +5,7 @@ RUN mkdir -p /build
 WORKDIR /build
 
 COPY . .
-RUN cat ./go.sum
-ENV GOPROXY="direct"
-RUN go clean -modcache
 RUN go mod tidy && go mod vendor
-RUN cat ./go.sum
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o bin/server ./cmd/server
 
 RUN mkdir -p /dist
