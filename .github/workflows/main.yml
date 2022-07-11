@@ -24,7 +24,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: bsjigi/tks-contract:latest
+        tags: seungkyua/tks-contract:latest
         
     - name: Checkout repo
       uses: actions/checkout@v2
