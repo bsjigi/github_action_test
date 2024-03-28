@@ -49,7 +49,7 @@ jobs:
       - 
         name: Run Prisma Cloud 
         id: prisma-cloud
-        uses: bridgecrewio/bridgecrew-action@master 
+        uses: bridgecrewio/checkov-action@master 
         env:
           PRISMA_API_URL: https://api.sg.prismacloud.io
         with:
